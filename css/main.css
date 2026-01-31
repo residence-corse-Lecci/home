@@ -1355,3 +1355,215 @@ strong {
   /* Taille du SVG */
   height: auto;
 }
+
+
+/* ===== VIDEOS (MODERNE / FULL BLEED AUTOPLAY) ===== */
+.videos-modern {
+  position: relative;
+  background: radial-gradient(1200px 500px at 20% 0%, rgba(129, 178, 154, .25), transparent 60%),
+    radial-gradient(900px 450px at 90% 20%, rgba(224, 94, 72, .18), transparent 55%),
+    #fff;
+  overflow: hidden;
+}
+
+.videos-title {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #1f2937;
+  font-size: clamp(1.6rem, 2.2vw, 2.2rem);
+  margin: 0;
+}
+
+.videos-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+/* Carte */
+.video-tile {
+  border-radius: 26px;
+  overflow: hidden;
+  position: relative;
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.10);
+  transform: translateZ(0);
+  transition: transform .35s ease, box-shadow .35s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.video-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.14);
+}
+
+.video-media {
+  position: relative;
+  width: 100%;
+  background: transparent;
+}
+
+.video-tile--portrait .video-media {
+  aspect-ratio: 9 / 16;
+}
+
+.video-tile--landscape .video-media {
+  aspect-ratio: 16 / 9;
+}
+
+/* Vidéo : proportions intactes (aucun recadrage) */
+.video-el {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  /* ✅ garde la vidéo intacte */
+  background: transparent;
+}
+
+
+/* Overlay titre */
+.video-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px 18px 16px 18px;
+  background: linear-gradient(to top, rgba(10, 15, 25, .86), rgba(10, 15, 25, .10) 70%, transparent);
+  color: #fff;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.video-heading {
+  margin: 10px 0 4px 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.15rem;
+}
+
+.video-meta {
+  margin: 0;
+  font-size: .9rem;
+  opacity: .85;
+}
+
+.video-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: .75rem;
+  letter-spacing: .06em;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+}
+
+/* Petit hint "Agrandir" */
+.video-expand-hint {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 3;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(0, 0, 0, .35);
+  border: 1px solid rgba(255, 255, 255, .25);
+  backdrop-filter: blur(10px);
+  pointer-events: none;
+}
+
+/* ===== MODALE VIDEO ===== */
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .72);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  z-index: 9999;
+}
+
+.video-modal.is-open {
+  display: flex;
+}
+
+.video-modal-content {
+  width: min(1100px, 96vw);
+  background: rgba(18, 18, 18, .70);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .45);
+  backdrop-filter: blur(14px);
+}
+
+.video-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, .12);
+}
+
+.video-modal-title {
+  margin: 0;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.video-modal-body {
+  padding: 0;
+  background: #000;
+}
+
+/* Player en grand */
+.video-modal-player {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 78vh;
+  background: #000;
+}
+
+/* Bouton fermer */
+.video-modal-close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10000;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: rgba(0, 0, 0, .45);
+  color: #fff;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.video-modal-close:hover {
+  background: rgba(0, 0, 0, .62);
+}
+
+@media (max-width: 576px) {
+  .video-tile {
+    border-radius: 22px;
+  }
+
+  .video-modal-player {
+    max-height: 70vh;
+  }
+}

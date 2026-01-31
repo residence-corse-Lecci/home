@@ -61,11 +61,16 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4">Tarifs et réservation</a>
+                            <a class="nav-link click-scroll" href="#section_4">Vidéos</a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_5">Tarifs et réservation</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_5">Contactez-nous</a>
+                            <a class="nav-link click-scroll" href="#section_6">Contactez-nous</a>
                         </li>
                     </ul>
                 </div>
@@ -206,7 +211,6 @@
         </section>
 
         <!-- Carrousel de photos -->
-        <!-- Carrousel de photos -->
         <section class="photo-carousel py-5">
             <div class="container">
                 <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -265,6 +269,100 @@
                 </div>
             </div>
         </section>
+
+        <!-- Section Vidéos (3 portraits côte à côte) -->
+        <section class="videos-modern py-5" id="section_4">
+            <div class="container">
+                <div class="row align-items-end mb-4">
+                    <div class="col-lg-8">
+                        <h2 class="videos-title mb-2">Vidéos de présentation</h2>
+                        <p class="videos-subtitle mb-0">Découvrez la résidence en quelques secondes.</p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- Vidéo 1 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <article class="video-tile video-tile--portrait" data-video-src="images/video1.mp4"
+                            data-video-title="Arrivée à Fiori di Cala Rossa">
+                            <div class="video-media video-media--native">
+                                <video class="video-el video-el--native" autoplay muted loop playsinline preload="auto"
+                                    poster="images/video-posters/video1.jpg">
+                                    <source src="images/video1.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="video-badge">VIDÉO 1</div>
+                                <h3 class="video-heading">Arrivée à Fiori di Cala Rossa</h3>
+                                <p class="video-meta">Cliquez pour agrandir</p>
+                            </div>
+
+                            <div class="video-expand-hint">Agrandir</div>
+                        </article>
+                    </div>
+
+                    <!-- Vidéo 2 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <article class="video-tile video-tile--portrait" data-video-src="images/video2.mp4"
+                            data-video-title="Piscine">
+                            <div class="video-media video-media--native">
+                                <video class="video-el video-el--native" autoplay muted loop playsinline preload="auto"
+                                    poster="images/video-posters/video2.jpg">
+                                    <source src="images/video2.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="video-badge">VIDÉO 2</div>
+                                <h3 class="video-heading">Piscine</h3>
+                                <p class="video-meta">Cliquez pour agrandir</p>
+                            </div>
+
+                            <div class="video-expand-hint">Agrandir</div>
+                        </article>
+                    </div>
+
+                    <!-- Vidéo 3 -->
+                    <div class="col-lg-4 col-md-6 col-12">
+                        <article class="video-tile video-tile--portrait" data-video-src="images/video3.mp4"
+                            data-video-title="Plage de Cala Rossa">
+                            <div class="video-media video-media--native">
+                                <video class="video-el video-el--native" autoplay muted loop playsinline preload="auto"
+                                    poster="images/video-posters/video3.jpg">
+                                    <source src="images/video3.mp4" type="video/mp4">
+                                </video>
+                            </div>
+
+                            <div class="video-overlay">
+                                <div class="video-badge">VIDÉO 3</div>
+                                <h3 class="video-heading">Plage de Cala Rossa</h3>
+                                <p class="video-meta">Cliquez pour agrandir</p>
+                            </div>
+
+                            <div class="video-expand-hint">Agrandir</div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MODALE VIDEO (plein écran) -->
+        <div class="video-modal" id="videoModal" aria-hidden="true">
+            <button class="video-modal-close" type="button" aria-label="Fermer">✕</button>
+
+            <div class="video-modal-content" role="dialog" aria-modal="true" aria-labelledby="videoModalTitle">
+                <div class="video-modal-header">
+                    <h3 id="videoModalTitle" class="video-modal-title"></h3>
+                </div>
+
+                <div class="video-modal-body">
+                    <video id="videoModalPlayer" class="video-modal-player" controls playsinline preload="auto"></video>
+                </div>
+            </div>
+        </div>
+
+
 
 
         <!-- Equipement session -->
@@ -377,13 +475,12 @@
             </div>
         </section>
 
-
-        <section class="membership-section top-padding" id="section_4">
+        <section class="membership-section top-padding" id="section_5">
             <div class="container">
                 <div class="row">
 
                     <div class="col-lg-12 col-12 text-center mx-auto mb-lg-5 mb-4">
-                        <h2><span>Tarifs</span> et Réservation 2025
+                        <h2><span>Tarifs</span> et Réservation 2026
                             <i class="bi bi-calendar icon-container big-icon"></i> <!-- Icône -->
                         </h2>
                     </div>
@@ -396,7 +493,7 @@
                                         <th style="width: 40%;">Période</th>
                                         <th style="width: 30%;">Tarif pour 7 nuits (linge, ménage et kit accueil
                                             compris)</th>
-                                        <th style="width: 30%;">Tarif à la nuit (2025)</th>
+                                        <th style="width: 30%;">Tarif à la nuit (2026)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -405,168 +502,172 @@
                                         <td colspan="3">Basse saison</td>
                                     </tr>
                                     <tr>
-                                        <td>30/03 au 05/04</td>
+                                        <td>28/03 au 04/04</td>
                                         <td>405,00 €</td>
                                         <td>45,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>06/04 au 12/04</td>
+                                        <td>04/04 au 11/04</td>
                                         <td>450,00 €</td>
                                         <td>50,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>13/04 au 19/04</td>
+                                        <td>11/04 au 18/04</td>
                                         <td>450,00 €</td>
                                         <td>50,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>20/04 au 26/04</td>
+                                        <td>18/04 au 25/04</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>27/04 au 03/05</td>
+                                        <td>25/04 au 02/05</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>04/05 au 10/05</td>
+                                        <td>02/05 au 09/05</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>11/05 au 17/05</td>
+                                        <td>09/05 au 16/05</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>18/05 au 24/05</td>
+                                        <td>16/05 au 23/05</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>25/05 au 31/05</td>
+                                        <td>23/05 au 30/05</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
+
                                     <tr
                                         style="width: 100%; background-color: #e05e48; font-weight: bold; text-align: center;">
                                         <td colspan="3">Haute saison</td>
                                     </tr>
                                     <tr>
-                                        <td>01/06 au 07/06</td>
+                                        <td>30/05 au 06/06</td>
                                         <td>730,00 €</td>
                                         <td>90,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>08/06 au 14/06</td>
+                                        <td>06/06 au 13/06</td>
                                         <td>730,00 €</td>
                                         <td>90,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>15/06 au 21/06</td>
+                                        <td>13/06 au 20/06</td>
                                         <td>835,00 €</td>
                                         <td>105,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>22/06 au 28/06</td>
+                                        <td>20/06 au 27/06</td>
                                         <td>905,00 €</td>
                                         <td>115,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>29/06 au 05/07</td>
+                                        <td>27/06 au 04/07</td>
                                         <td>940,00 €</td>
                                         <td>120,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>06/07 au 12/07</td>
+                                        <td>04/07 au 11/07</td>
                                         <td>1 045,00 €</td>
                                         <td>135,00 €</td>
                                     </tr>
+
                                     <tr
                                         style="width: 100%; background-color: #a82109; font-weight: bold; text-align: center; color: white;">
                                         <td colspan="3">Très Haute saison</td>
                                     </tr>
                                     <tr>
-                                        <td>13/07 au 19/07</td>
+                                        <td>11/07 au 18/07</td>
                                         <td>1 150,00 €</td>
                                         <td>150,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>20/07 au 26/07</td>
+                                        <td>18/07 au 25/07</td>
                                         <td>1 220,00 €</td>
                                         <td>160,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>27/07 au 02/08</td>
+                                        <td>25/07 au 01/08</td>
                                         <td>1 220,00 €</td>
                                         <td>160,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>03/08 au 09/08</td>
+                                        <td>01/08 au 08/08</td>
                                         <td>1 220,00 €</td>
                                         <td>160,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>10/08 au 16/08</td>
+                                        <td>08/08 au 15/08</td>
                                         <td>1 220,00 €</td>
                                         <td>160,00 €</td>
                                     </tr>
+
                                     <tr
                                         style="width: 100%; background-color: #e05e48; font-weight: bold; text-align: center;">
                                         <td colspan="3">Haute saison</td>
                                     </tr>
                                     <tr>
-                                        <td>17/08 au 23/08</td>
+                                        <td>15/08 au 22/08</td>
                                         <td>1 080,00 €</td>
                                         <td>140,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>24/08 au 30/08</td>
+                                        <td>22/08 au 29/08</td>
                                         <td>905,00 €</td>
                                         <td>115,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>31/08 au 06/09</td>
+                                        <td>29/08 au 05/09</td>
                                         <td>800,00 €</td>
                                         <td>100,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>07/09 au 13/09</td>
+                                        <td>05/09 au 12/09</td>
                                         <td>730,00 €</td>
                                         <td>90,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>14/09 au 20/09</td>
+                                        <td>12/09 au 19/09</td>
                                         <td>590,00 €</td>
                                         <td>70,00 €</td>
                                     </tr>
+
                                     <tr
                                         style="width: 100%; background-color: #f0f0f0; font-weight: bold; text-align: center;">
                                         <td colspan="3">Basse saison</td>
                                     </tr>
                                     <tr>
-                                        <td>21/09 au 27/09</td>
+                                        <td>19/09 au 26/09</td>
                                         <td>520,00 €</td>
                                         <td>60,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>28/09 au 04/10</td>
+                                        <td>26/09 au 03/10</td>
                                         <td>450,00 €</td>
                                         <td>50,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>05/10 au 11/10</td>
+                                        <td>03/10 au 10/10</td>
                                         <td>450,00 €</td>
                                         <td>50,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>12/10 au 18/10</td>
+                                        <td>10/10 au 17/10</td>
                                         <td>450,00 €</td>
                                         <td>50,00 €</td>
                                     </tr>
                                     <tr>
-                                        <td>19/10 au 25/10</td>
+                                        <td>17/10 au 24/10</td>
                                         <td>450,00 €</td>
                                         <td>50,00 €</td>
                                     </tr>
@@ -574,16 +675,16 @@
                             </table>
                         </div>
                     </div>
+
                     <div class="col-md-5 p-3 rounded">
                         <p>
-                            Les tarifs de location à la semaine pour 2025 comprennent le linge (draps et serviettes),
+                            Les tarifs de location à la semaine pour 2026 comprennent le linge (draps et serviettes),
                             les frais de ménage et le kit d’accueil. Les réservations se font sur le site
                             <a href="https://www.residenceslecci.com/location/studio-lecci-studio-n-42-417595.html?FRMAdultos=2"
                                 target="_blank"
                                 class="fw-bold">https://www.residenceslecci.com/location/studio-lecci-studio-n-42-417595.html?FRMAdultos=2</a>
                             ou en contactant Paule du service de conciergerie au <strong>06 24 33 88 60</strong>
-                            (préciser <strong>studio
-                                n°42</strong>).
+                            (préciser <strong>studio n°42</strong>).
                         </p>
                         <p><strong>Caution (remboursable)</strong></p>
                         <p><strong>Montant :</strong> 350,00 € /réservation</p>
@@ -591,17 +692,18 @@
                             l’arrivée.</p>
                         <div class="text-center mt-3">
                             <a href="https://www.residenceslecci.com/location/studio-lecci-studio-n-42-417595.html?FRMAdultos=2"
-                                class="btn custom-btn smoothscroll me-3" target="_blank">Réservez
-                                dès maintenant !</a>
+                                class="btn custom-btn smoothscroll me-3" target="_blank">Réservez dès maintenant !</a>
                         </div>
                         </br>
                         </br>
                         <!-- <p>Pour plus d'informations, vous pouvez télécharger <a href="site corse.pdf" target="_blank"
-                                class="fw-bold">la grille tarifaire</a>.</p> -->
+                        class="fw-bold">la grille tarifaire</a>.</p> -->
                     </div>
+
                 </div>
             </div>
         </section>
+
 
         <section class="info-section section-padding">
             <div class="container">
@@ -777,7 +879,7 @@
         </section>
 
 
-        <section class="contact-section section-padding" id="section_5">
+        <section class="contact-section section-padding" id="section_6">
             <div class="container">
                 <div class="row">
 
@@ -965,6 +1067,58 @@
         });
     </script>
 
+    <script>
+        (function () {
+            const modal = document.getElementById("videoModal");
+            const closeBtn = modal.querySelector(".video-modal-close");
+            const player = document.getElementById("videoModalPlayer");
+            const titleEl = document.getElementById("videoModalTitle");
+
+            function openModal(src, title) {
+                titleEl.textContent = title || "";
+                player.src = src;
+                modal.classList.add("is-open");
+                modal.setAttribute("aria-hidden", "false");
+
+                // Lancer la lecture (peut être bloqué si non user-gesture, mais ici on clique)
+                player.play().catch(() => { });
+                document.body.style.overflow = "hidden";
+            }
+
+            function closeModal() {
+                modal.classList.remove("is-open");
+                modal.setAttribute("aria-hidden", "true");
+                player.pause();
+                player.removeAttribute("src");
+                player.load();
+                document.body.style.overflow = "";
+            }
+
+            // Ouvrir au clic sur une carte
+            document.querySelectorAll(".video-tile[data-video-src]").forEach(tile => {
+                tile.addEventListener("click", () => {
+                    const src = tile.getAttribute("data-video-src");
+                    const title = tile.getAttribute("data-video-title");
+                    if (src) openModal(src, title);
+                });
+            });
+
+            // Fermer
+            closeBtn.addEventListener("click", closeModal);
+
+            // Click sur fond noir
+            modal.addEventListener("click", (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // ESC
+            document.addEventListener("keydown", (e) => {
+                if (e.key === "Escape" && modal.classList.contains("is-open")) {
+                    closeModal();
+                }
+            });
+        })();
+    </script>
 
 
 </body>
