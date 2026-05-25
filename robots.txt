@@ -1,0 +1,9 @@
+# robots.txt - Fiori di Cala Rossa - Location vacances Corse du Sud
+User-agent: *
+Allow: /
+Disallow: /.git/
+Disallow: /.idea/
+Disallow: /.DS_Store
+
+# Sitemap
+Sitemap: https://residence-corse-lecci.github.io/home/sitemap.xml

@@ -1,0 +1,12 @@
+/* TEAM */
+Hôtes: Elisabeth et Vincent
+Contact: vincent_vanrechem [at] yahoo.fr
+Location: Lecci, Corse-du-Sud, France
+
+/* SITE */
+Last update: 2026/05/25
+Language: Français
+Doctype: HTML5
+Standards: HTML5, CSS3
+Components: Bootstrap, jQuery
+Description: Location studio de vacances en Corse du Sud, à Lecci, à 800m de la plage de Cala Rossa et 10 min de Porto-Vecchio.
